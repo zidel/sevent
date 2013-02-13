@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 2.8)
 project(sevent CXX)
 enable_testing()
 
+set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pthread")
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+
 find_package( Boost 1.46 REQUIRED system serialization thread)
 include_directories(${Boost_INCLUDE_DIR})
 
